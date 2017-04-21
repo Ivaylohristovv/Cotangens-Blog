@@ -12,6 +12,30 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6955,4 +6979,22 @@ button.close {
 }
 .panel-primary .panel-title {
   color: #fff;
+}
+.modal .close {
+  color: #2c3e50;
+}
+.popover {
+  color: #2c3e50;
+}
+article .author {
+  margin-bottom: 0;
+}
+article .author  {
+  display: block;
+  font-size: 100%;
+  line-height: 1.42857143;
+  color: #b4bcc2;
+}
+article .author  {
+  content: '\2014 \00A0';
 }
