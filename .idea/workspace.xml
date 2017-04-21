@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="280306d9-ed72-4c6b-9064-37a27eeec051" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.hbs" afterPath="$PROJECT_DIR$/views/layout.hbs" />
-    </list>
+    <list default="true" id="280306d9-ed72-4c6b-9064-37a27eeec051" name="Default" comment="" />
     <ignored path="SoftUniBlog.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -378,12 +375,12 @@
       <workItem from="1492682841437" duration="30000" />
       <workItem from="1492683462156" duration="602000" />
       <workItem from="1492685047011" duration="564000" />
-      <workItem from="1492768415752" duration="1665000" />
+      <workItem from="1492768415752" duration="1999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57795000" />
+    <option name="totallyTimeSpent" value="58129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1083" height="1016" extended-state="1" />
