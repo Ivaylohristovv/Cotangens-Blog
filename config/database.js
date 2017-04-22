@@ -15,6 +15,7 @@ module.exports = (config) => {
     });
 
     require('./../models/Role').initialize();
+    require('./../models/Category').initializeCategories();
     require('./../models/User').seedAdmin();
     require('./../models/Article');
 };

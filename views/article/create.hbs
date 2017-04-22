@@ -13,11 +13,10 @@
                 <div class="form-group">
                     <label for="select" class="col-sm-4 control-label">Article Category</label>
                     <div class="col-sm-4">
-                        <select class="form-control" id="select">
-                            <option>Blog</option>
-                            <option>Cat Care</option>
-                            <option>Cat Health</option>
-                            <option>Cat Breeds</option>
+                        <select class="form-control" id="select" name="category">
+                            {{#each categories}}
+                                <option>{{this.name}}</option>
+                            {{/each}}
                         </select>
                     </div>
                 </div>
@@ -30,7 +29,6 @@
 
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-4">
-
                         <button type="reset" class="btn btn-default">Cancel</button>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
