@@ -4,8 +4,10 @@
             <article>
                 <header>
                     <h2>{{article.title}}</h2>
+                    <small class="date">
+                        {{article.date}}
+                    </small>
                 </header>
-
                 <p>
                     {{article.content}}
                 </p>
@@ -13,7 +15,6 @@
                 <small class="author">
                     {{article.author.fullName}}
                 </small>
-
                 <footer>
                     <div class="pull-right">
                         {{#if isUserAuthorized}}
