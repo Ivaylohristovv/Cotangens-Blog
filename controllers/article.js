@@ -1,8 +1,12 @@
 const Article = require('mongoose').model('Article');
+const Category = require('mongoose').model('Category');
+
 
 module.exports = {
     createGet: (req, res) => {
-        res.render('article/create');
+        Category.find({}).then(categories => {
+            res.render('article/create', {categories});
+        });
     },
     createPost: (req, res) => {
         let articleArgs = req.body;
@@ -26,20 +30,24 @@ module.exports = {
         }
 
         let userId = req.user.id;
-        articleArgs.author = userId;
+        Category.findOne({name: articleArgs.category}).then(category => {
+            articleArgs.category = category._id;
+            articleArgs.author = userId;
 
-        Article.create(articleArgs).then(article => {
-            req.user.articles.push(article.id);
-            req.user.save(err => {
-                if(err){
-                    res.render('article/create', {
-                        error: err.message
-                    });
-                }else{
-                    res.redirect('/');
-                }
+            Article.create(articleArgs).then(article => {
+                req.user.articles.push(article.id);
+                req.user.save(err => {
+                    if(err){
+                        res.render('article/create', {
+                            error: err.message
+                        });
+                    }else{
+                        res.redirect('/');
+                    }
+                })
             })
-        })
+        });
+
     },
     details:(req, res) => {
         let id = req.params.id;
@@ -121,6 +129,7 @@ module.exports = {
                 res.render('article/delete', article)
             });
         });
+
     },
 
     deletePost: (req, res) => {
