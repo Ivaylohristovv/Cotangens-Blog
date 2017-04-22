@@ -1,28 +1,41 @@
-<div class="container body-content">
-    <div class="row">
-<div class="col-md-6">
+<div class="container body-content span=8 offset=2">
+    <div class="well">
 
-        <header>
-            <h2><a>Welcome</a></h2>
-            <div>
-                <h3>
-                User name: {{user.email}}
-                </h3>
-            </div>
-            <div>
-                <h3>
-                    Full name: {{user.fullName}}
-                </h3>
-            </div>
-        </header>
+        <form class="form-horizontal" method="post" action="#">
+            <fieldset>
+                <legend>User Details</legend>
 
-
-            <div class="pull-right">
-                <a class="btn btn-default btn-xs"
-                   href="/">Back &raquo;</a>
-            </div>
-
-
-</div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="inputEmail">Email</label>
+                    <div class="col-sm-4 ">
+                        <a>{{user.email}}</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="inputFullName">Full Name</label>
+                    <div class="col-sm-4 ">
+                        <a>{{user.fullName}}</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="inputPassword">Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required name="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Confirm Password</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Confirm Password" required name="repeatedPassword">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a href="/" class="btn btn-default">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Change</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
 </div>
