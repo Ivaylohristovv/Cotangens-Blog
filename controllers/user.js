@@ -2,11 +2,15 @@ const User = require('mongoose').model('User');
 const Role = require('mongoose').model('Role');
 const encryption = require('./../utilities/encryption');
 
+
+
 module.exports = {
     registerGet: (req, res) => {
         res.render('user/register');
     },
 
+    
+    
     registerPost:(req, res) => {
         let registerArgs = req.body;
 
