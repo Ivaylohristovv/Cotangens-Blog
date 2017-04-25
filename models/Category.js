@@ -13,10 +13,10 @@ const Category = mongoose.model('Category', categorySchema);
 module.exports = Category;
 
 module.exports.initializeCategories = () => {
-    createCategory('categoryA');
-    createCategory('categoryB');
-    createCategory('categoryC');
-    createCategory('categoryD');
+    createCategory('Cat Care');
+    createCategory('Cat Health');
+    createCategory('Cat Breeds');
+    createCategory('Blog');
 };
 
 function createCategory(name) {
